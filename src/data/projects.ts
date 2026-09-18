@@ -9,7 +9,7 @@ export const projects: Project[] = [
     context:
       'Projeto desenvolvido para o programa Amapá Jovem, iniciativa do Governo do Estado do Amapá voltada à inclusão social de jovens. A aplicação precisava suportar o fluxo completo de inscrições e a gestão dos candidatos por servidores públicos.',
     problem:
-      'O processo de inscrição era conduzido de forma presencial ou manual, gerando filas, retrabalho e dificuldade no acompanhamento dos candidatos. Era necessário digitalizar todo o fluxo, garantindo rastreabilidade e facilidade de uso para o cidadão e para o gestor.',
+      'A plataforma precisava ser intuitiva para os candidatos, garantindo que o processo de inscrição fosse simples e eficiente. Além disso, o painel administrativo deveria permitir aos servidores públicos gerenciar os candidatos inscritos de forma organizada e segura.',
     contribution:
       'Atuei no desenvolvimento da interface web, implementando componentes de formulário, validações, fluxo de inscrição e integração com a API. Trabalhei também no painel administrativo para gestão dos candidatos inscritos, contribuindo para a experiência do servidor público.',
     technicalDecisions:
