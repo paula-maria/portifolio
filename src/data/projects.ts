@@ -27,7 +27,7 @@ export const projects: Project[] = [
       { label: 'Validação e testes' },
       { label: 'Entrega' },
     ],
-    tags: ['React', 'JavaScript', 'Web'],
+    tags: ['PHP', 'Laravel', 'Blade', 'Tailwind CSS'],
     video: '/videos/amapa-jovem.mp4',
     images: [
       { src: '/images/projects/amapa-jovem/1.png', alt: 'Página inicial Amapá Jovem' },
