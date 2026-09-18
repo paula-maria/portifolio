@@ -72,7 +72,7 @@ export const projects: Project[] = [
       { src: '/images/projects/estrategia-digital/1.png', alt: 'Home Estratégia Digital' },
       { src: '/images/projects/estrategia-digital/2.png', alt: 'Seção de projetos' },
     ],
-    siteUrl: undefined,
+    siteUrl: 'https://governodigital.portal.ap.gov.br/',
     repoUrl: undefined,
     featured: true,
     category: 'web',
