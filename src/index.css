@@ -94,9 +94,7 @@ ul, ol { list-style: none; }
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background:
-    linear-gradient(90deg, rgba(23,63,146,.04) 1px, transparent 1px) 0 0 / 25% 100%,
-    var(--color-bg);
+  background: var(--color-bg);
 }
 
 .page-content {
@@ -373,7 +371,6 @@ ul, ol { list-style: none; }
   column-gap: 48px;
   row-gap: 0;
   align-items: center;
-  border-bottom: 1px solid var(--color-border);
 }
 
 .hero-content {
@@ -1220,6 +1217,10 @@ ul, ol { list-style: none; }
   grid-template-columns: 1fr 420px;
   gap: 64px;
   align-items: start;
+}
+
+.case-body-layout--full {
+  grid-template-columns: 1fr;
 }
 
 .case-sidebar {

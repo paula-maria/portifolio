@@ -74,7 +74,7 @@ export function Project() {
           </div>
         )}
 
-        <div className="case-body-layout">
+        <div className={`case-body-layout${!project.video ? ' case-body-layout--full' : ''}`}>
           <div className="case-main-content">
             {/* ── Content sections ─────────────────────────────────── */}
             <div className="case-sections">
@@ -138,10 +138,9 @@ export function Project() {
 
         </div>
           </div>
-          
+
+          {project.video && (
           <aside className="case-sidebar">
-            {/* ── Video ────────────────────────────────────────────── */}
-            {project.video && (
               <div
                 className="case-video"
                 data-animate
@@ -149,8 +148,8 @@ export function Project() {
               >
                 <ProjectVideo src={project.video} title={project.title} />
               </div>
-            )}
           </aside>
+          )}
         </div>
 
         {/* ── Gallery ──────────────────────────────────────────── */}
