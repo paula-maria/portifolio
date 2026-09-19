@@ -8,7 +8,15 @@ interface ContainerProps {
 
 export function Container({ children, className, as: Tag = 'div' }: ContainerProps) {
   return (
-    <Tag className={cn('w-full max-w-[860px] mx-auto px-4 md:px-6', className)}>
+    <Tag
+      className={className}
+      style={{
+        width: '100%',
+        maxWidth: '1440px',
+        marginInline: 'auto',
+        paddingInline: 'clamp(24px, 5vw, 48px)',
+      }}
+    >
       {children}
     </Tag>
   )

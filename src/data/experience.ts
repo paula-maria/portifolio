@@ -36,6 +36,20 @@ export const experience: ExperienceItem[] = [
   },
   {
     id: '3',
+    period: '2025',
+    company: 'Restaurante Lettuce',
+    role: 'Desenvolvedora Freelance',
+    description:
+      'Desenvolvimento de sistema completo de gestão de pedidos com painel de senhas em tempo real.',
+    bullets: [
+      'Desenvolvimento fullstack do sistema: API REST + WebSocket com FastAPI e frontend React',
+      'Modelagem do banco de dados PostgreSQL com SQLAlchemy e controle de migrações via Alembic',
+      'Implementação de comunicação em tempo real entre painel da cozinha e painel TV via WebSocket',
+      'Geração automática de senhas sequenciais e fluxo completo de status dos pedidos',
+    ],
+  },
+  {
+    id: '4',
     period: '2023 — 2024',
     company: 'PRODAP — Governo do Estado do Amapá',
     role: 'Estagiária em Desenvolvimento Web',
@@ -50,7 +64,7 @@ export const experience: ExperienceItem[] = [
     ],
   },
   {
-    id: '4',
+    id: '5',
     period: '2022 — 2023',
     company: 'IFAP — Instituto Federal do Amapá',
     role: 'Estagiária de Suporte de TI',

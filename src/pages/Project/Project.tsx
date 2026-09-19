@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
-import { useParams, Link, Navigate } from 'react-router-dom'
-import { ArrowLeft, ExternalLink, Github } from 'lucide-react'
+import { useParams, Navigate } from 'react-router-dom'
+import { ExternalLink, Github } from 'lucide-react'
 import { getProjectBySlug, getAdjacentProjects } from '@/data/projects'
 import { ProjectVideo } from '@/components/projects/ProjectVideo'
 import { ProjectNavigation } from '@/components/projects/ProjectNavigation'
@@ -29,16 +29,6 @@ export function Project() {
   return (
     <main className="project-page">
       <Container>
-
-        {/* ── Back ──────────────────────────────────────────────── */}
-        <nav className="project-breadcrumb" aria-label="Localização">
-          <Link to="/" className="project-breadcrumb__back">
-            <ArrowLeft size={14} />
-            Voltar ao início
-          </Link>
-          <span aria-hidden="true">/</span>
-          <span>{project.title}</span>
-        </nav>
 
         {/* ── Case header ───────────────────────────────────────── */}
         <header className="case-header" data-animate>

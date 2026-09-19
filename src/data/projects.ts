@@ -79,6 +79,45 @@ export const projects: Project[] = [
   },
   {
     id: '3',
+    slug: 'senha-lettuce',
+    title: 'Sistema de Senhas',
+    subtitle: 'RESTAURANTE LETTUCE',
+    tagline: 'Sistema de gestão de pedidos com painel de senhas em tempo real para restaurante.',
+    context:
+      'Freelance desenvolvido para o Restaurante Lettuce, que precisava de um sistema digital para substituir o controle manual de pedidos. O restaurante opera com fluxo intenso de atendimento e necessitava de uma solução que conectasse a cozinha ao painel de chamada de senhas sem atritos.',
+    problem:
+      'O controle de pedidos era feito manualmente, o que gerava erros na ordem de preparo, falta de visibilidade do status para a equipe e ausência de um painel de chamada de senhas para os clientes. Era necessário um sistema em tempo real, sem necessidade de atualização manual.',
+    contribution:
+      'Desenvolvi o sistema completo de ponta a ponta: modelagem do banco de dados, API REST com FastAPI, WebSocket para comunicação em tempo real, painel da cozinha para gestão de pedidos e painel TV para exibição das senhas.',
+    technicalDecisions:
+      'Escolhi FastAPI pela performance e pelo suporte nativo a WebSockets, eliminando a necessidade de um servidor adicional para comunicação em tempo real. O SQLAlchemy 2.0 com Alembic garantiu controle de migrações sem intervenção manual no banco. No frontend, React com Axios e um listener de WebSocket simples permitiu atualizações automáticas no painel TV sem polling.',
+    results: [
+      'Painel de cozinha com gestão completa de status dos pedidos',
+      'Painel TV atualizado em tempo real via WebSocket',
+      'Geração automática de senhas sequenciais (A001 → A999 → B001...)',
+      'Sistema em produção no restaurante',
+    ],
+    engineeringSteps: [
+      { label: 'Levantamento de requisitos com o cliente' },
+      { label: 'Modelagem do banco de dados' },
+      { label: 'API REST + WebSocket (FastAPI)' },
+      { label: 'Painel da cozinha (React)' },
+      { label: 'Painel TV com atualização automática' },
+      { label: 'Deploy e entrega' },
+    ],
+    tags: ['FastAPI', 'React', 'PostgreSQL', 'WebSocket', 'SQLAlchemy'],
+    video: undefined,
+    images: [
+      { src: '/images/projects/senha-lettuce/1.png', alt: 'Painel da cozinha' },
+      { src: '/images/projects/senha-lettuce/2.png', alt: 'Painel TV de senhas' },
+    ],
+    siteUrl: undefined,
+    repoUrl: undefined,
+    featured: false,
+    category: 'system',
+  },
+  {
+    id: '4',
     slug: 'studycourses',
     title: 'StudyCourses',
     tagline: 'Plataforma de estudos com cursos, trilhas e materiais.',
@@ -115,7 +154,7 @@ export const projects: Project[] = [
     category: 'web',
   },
   {
-    id: '4',
+    id: '5',
     slug: 'orbita',
     title: 'Órbita',
     tagline: 'Sistema interno para gestão de demandas, tarefas e usuários.',
@@ -152,7 +191,7 @@ export const projects: Project[] = [
     category: 'system',
   },
   {
-    id: '5',
+    id: '6',
     slug: 'dashboards-judiciais',
     title: 'Dashboards Judiciais',
     tagline: 'Dashboards para análise de indicadores do TJAP.',
@@ -189,7 +228,7 @@ export const projects: Project[] = [
     category: 'data',
   },
   {
-    id: '6',
+    id: '7',
     slug: 'qsar',
     title: 'QSAR',
     tagline: 'Modelo de Machine Learning aplicado à predição de propriedades químicas.',
