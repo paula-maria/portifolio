@@ -29,6 +29,7 @@ export const projects: Project[] = [
     ],
     tags: ['PHP', 'Laravel', 'Blade', 'Tailwind CSS'],
     video: '/videos/amapa-jovem.mp4',
+    coverImage: '/images/projects/amapa-jovem/1.png',
     images: [
       { src: '/images/projects/amapa-jovem/1.png', alt: 'Página inicial Amapá Jovem' },
       { src: '/images/projects/amapa-jovem/2.png', alt: 'Formulário de inscrição' },

@@ -4,10 +4,10 @@ import { ProjectVideo } from '@/components/projects/ProjectVideo'
 import { featuredProjects } from '@/data/projects'
 
 const STATS = [
-  { value: '+', label: 'Projetos reais' },
-  { value: '+', label: 'Sistemas desenvolvidos' },
-  { value: '+', label: 'Contextos governamentais' },
-  { value: '+', label: 'Soluções orientadas a dados' },
+  { value: '5+', label: 'Projetos reais' },
+  { value: '7+', label: 'Sistemas desenvolvidos' },
+  { value: '3', label: 'Contextos governamentais' },
+  { value: '4+', label: 'Soluções orientadas a dados' },
 ] as const
 
 export function Hero() {

@@ -21,6 +21,7 @@ export interface Project {
   engineeringSteps: EngineeringStep[]  // Etapas reais do trabalho
   tags: string[]
   video?: string
+  coverImage?: string        // imagem de capa para o card
   images: ProjectImage[]
   siteUrl?: string
   repoUrl?: string

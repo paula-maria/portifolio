@@ -114,18 +114,20 @@ ul, ol { list-style: none; }
 /* ─── Section title ──────────────────────────────────────────────────── */
 .section-title-text {
   font-family: var(--font-mono);
-  font-size: 11px;
+  font-size: 13px;
   font-weight: 700;
   letter-spacing: .18em;
   text-transform: uppercase;
-  color: var(--color-ink);
-  margin-bottom: 6px;
+  color: var(--color-navy);
+  margin-bottom: 8px;
 }
 
 .section-subtitle {
-  font-size: 14px;
-  color: var(--color-slate);
-  margin-top: 4px;
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--color-ink);
+  margin-top: 6px;
+  line-height: 1.3;
 }
 
 /* ─── Navbar ─────────────────────────────────────────────────────────── */
@@ -543,20 +545,25 @@ ul, ol { list-style: none; }
 
 /* ─── Featured projects ──────────────────────────────────────────────── */
 .featured-projects-grid {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   gap: 24px;
 }
 
 .featured-project-card {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 32px;
-  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
   padding: 28px;
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
   background: rgba(255,255,255,.5);
+  transition: box-shadow 180ms, border-color 180ms;
+}
+
+.featured-project-card:hover {
+  box-shadow: 0 4px 20px rgba(23,63,146,.08);
+  border-color: var(--color-navy);
 }
 
 .featured-project-card__index {
@@ -581,6 +588,14 @@ ul, ol { list-style: none; }
   line-height: 1.6;
   color: var(--color-slate);
   margin-bottom: 14px;
+}
+
+.featured-project-card__cover {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  border-radius: var(--radius-sm);
+  display: block;
 }
 
 /* ─── Other projects ─────────────────────────────────────────────────── */
@@ -1231,11 +1246,7 @@ ul, ol { list-style: none; }
   .hero-stat:nth-child(odd)  { border-right: 1px solid var(--color-border); }
   .hero-stat:nth-last-child(-n+2) { border-bottom: none; }
 
-  .featured-project-card {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-
+  .featured-projects-grid { grid-template-columns: 1fr; }
   .other-projects-grid { grid-template-columns: 1fr; }
 
   .about-layout {

@@ -51,6 +51,12 @@ export function ProjectCard({ project, index, variant = 'featured' }: ProjectCar
       <div className="featured-project-card__media">
         {project.video ? (
           <ProjectVideo src={project.video} title={project.title} />
+        ) : project.coverImage ? (
+          <img
+            src={project.coverImage}
+            alt={project.title}
+            className="featured-project-card__cover"
+          />
         ) : (
           <div className="project-media-placeholder" aria-hidden="true" />
         )}
