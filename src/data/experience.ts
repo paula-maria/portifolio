@@ -71,7 +71,7 @@ export const experience: ExperienceItem[] = [
     bullets: [
       'Administração de servidores Linux e configuração de redes',
       'Suporte técnico a alunos e docentes',
-      'Manutenção de laboratórios de informática',
+      'Manutenção e instalação de computadores',
     ],
   },
 ]
