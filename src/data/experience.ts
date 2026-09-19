@@ -10,9 +10,9 @@ export interface ExperienceItem {
 export const experience: ExperienceItem[] = [
   {
     id: '1',
-    period: '2024 — Atual',
+    period: 'Jul 2026 — Atual',
     company: 'TJAP — Tribunal de Justiça do Estado do Amapá',
-    role: 'Residente Tecnológico em Desenvolvimento de Software',
+    role: 'Residente Tecnológica em Desenvolvimento de Software',
     description:
       'Desenvolvimento de software, dashboards para análise de dados judiciais e automação de processos.',
     bullets: [
@@ -24,19 +24,18 @@ export const experience: ExperienceItem[] = [
   },
   {
     id: '2',
-    period: '2024 — Atual',
+    period: 'Ago 2025 — Atual',
     company: 'PET Saúde Digital no Meio do Mundo — UNIFAP',
     role: 'Bolsista de TI',
     description: 'Desenvolvimento de soluções tecnológicas para projetos de saúde digital, desenvolvimento web e análise de dados.',
     bullets: [
       'Desenvolvimento de sistemas de saúde digital do estado do Amapá',
       'Gestão e Análise de requisitos',
-      '',
     ],
   },
   {
     id: '3',
-    period: '2025',
+    period: '2026',
     company: 'Restaurante Lettuce',
     role: 'Desenvolvedora Freelance',
     description:
@@ -50,7 +49,7 @@ export const experience: ExperienceItem[] = [
   },
   {
     id: '4',
-    period: '2023 — 2024',
+    period: 'Mar 2026 — Jul 2026',
     company: 'PRODAP — Governo do Estado do Amapá',
     role: 'Estagiária em Desenvolvimento Web',
     description:
@@ -58,14 +57,13 @@ export const experience: ExperienceItem[] = [
     bullets: [
       'Desenvolvimento fullstack de sistemas governamentais com Laravel e React',
       'Gestão de demandas com equipe técnica',
-      'Aplicação de ',
       'Implementação de features para portais e sistemas de governo',
       'Containerização de aplicações com Docker',
     ],
   },
   {
     id: '5',
-    period: '2022 — 2023',
+    period: 'Jul 2022 — Nov 2022',
     company: 'IFAP — Instituto Federal do Amapá',
     role: 'Estagiária de Suporte de TI',
     description:
