@@ -9,7 +9,7 @@ interface ContainerProps {
 export function Container({ children, className, as: Tag = 'div' }: ContainerProps) {
   return (
     <Tag
-      className={className}
+      className={cn(className)}
       style={{
         width: '100%',
         maxWidth: '1440px',

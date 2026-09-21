@@ -39,9 +39,11 @@ export function ProjectVideo({ src, title, className }: ProjectVideoProps) {
 
       {isExpanded && (
         <div className="lightbox" onClick={() => setIsExpanded(false)}>
-          <button className="lightbox-close" aria-label="Fechar lightbox">
-            <X size={24} />
-          </button>
+          <div className="lightbox-topbar" style={{ justifyContent: 'flex-end' }}>
+            <button className="lightbox-close-btn" onClick={() => setIsExpanded(false)} aria-label="Fechar lightbox">
+              <X size={20} />
+            </button>
+          </div>
           <div className="lightbox-content" onClick={(e) => e.stopPropagation()}>
             <video 
               src={src} 

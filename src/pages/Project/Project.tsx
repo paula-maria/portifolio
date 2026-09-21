@@ -9,6 +9,8 @@ import { Button } from '@/components/ui/Button'
 import { Container } from '@/components/ui/Container'
 import { useScrollAnimation } from '@/hooks/useScrollAnimation'
 
+import { ProjectStatusBadge } from '@/components/projects/ProjectStatusBadge'
+
 export function Project() {
   const { slug } = useParams<{ slug: string }>()
   const project = slug ? getProjectBySlug(slug) : undefined
@@ -38,6 +40,7 @@ export function Project() {
             {project.category === 'system' && <span className="case-meta-tag">SISTEMA INTERNO</span>}
             {project.category === 'data'   && <span className="case-meta-tag">ANÁLISE DE DADOS</span>}
             {project.category === 'ml'     && <span className="case-meta-tag">MACHINE LEARNING</span>}
+            <ProjectStatusBadge status={project.status} />
           </div>
 
           <h1 className="case-header__title">{project.title.toUpperCase()}</h1>
@@ -74,83 +77,100 @@ export function Project() {
           </div>
         )}
 
-        <div className={`case-body-layout${!project.video ? ' case-body-layout--full' : ''}`}>
-          <div className="case-main-content">
-            {/* ── Content sections ─────────────────────────────────── */}
-            <div className="case-sections">
+        {(() => {
+          const sidebarImageSrc = project.video ? null : (project.coverImage || project.images[0]?.src)
+          const hasSidebarMedia = Boolean(project.video || sidebarImageSrc)
 
-          <section
-            className="case-section"
-            data-animate
-            style={{ '--delay': '80ms' } as React.CSSProperties}
-          >
-            <h2 className="case-section__heading">CONTEXTO</h2>
-            <div className="case-section__rule" aria-hidden="true" />
-            <p className="case-section__body">{project.context}</p>
-          </section>
+          return (
+            <div className={`case-body-layout${!hasSidebarMedia ? ' case-body-layout--full' : ''}`}>
+              <div className="case-main-content">
+                {/* ── Content sections ─────────────────────────────────── */}
+                <div className="case-sections">
 
-          <section
-            className="case-section"
-            data-animate
-            style={{ '--delay': '120ms' } as React.CSSProperties}
-          >
-            <h2 className="case-section__heading">PROBLEMA</h2>
-            <div className="case-section__rule" aria-hidden="true" />
-            <p className="case-section__body">{project.problem}</p>
-          </section>
-
-          <section
-            className="case-section"
-            data-animate
-            style={{ '--delay': '160ms' } as React.CSSProperties}
-          >
-            <h2 className="case-section__heading">MINHA ATUAÇÃO</h2>
-            <div className="case-section__rule" aria-hidden="true" />
-            <p className="case-section__body">{project.contribution}</p>
-          </section>
-
-          <section
-            className="case-section"
-            data-animate
-            style={{ '--delay': '200ms' } as React.CSSProperties}
-          >
-            <h2 className="case-section__heading">DECISÕES TÉCNICAS</h2>
-            <div className="case-section__rule" aria-hidden="true" />
-            <p className="case-section__body">{project.technicalDecisions}</p>
-          </section>
-
-          <section
-            className="case-section"
-            data-animate
-            style={{ '--delay': '240ms' } as React.CSSProperties}
-          >
-            <h2 className="case-section__heading">RESULTADO</h2>
-            <div className="case-section__rule" aria-hidden="true" />
-            <ul className="case-results">
-              {project.results.map((result, i) => (
-                <li key={i} className="case-result">
-                  <span className="case-result__check" aria-hidden="true">✓</span>
-                  {result}
-                </li>
-              ))}
-            </ul>
-          </section>
-
-        </div>
-          </div>
-
-          {project.video && (
-          <aside className="case-sidebar">
-              <div
-                className="case-video"
+              <section
+                className="case-section"
                 data-animate
                 style={{ '--delay': '80ms' } as React.CSSProperties}
               >
-                <ProjectVideo src={project.video} title={project.title} />
+                <h2 className="case-section__heading">CONTEXTO</h2>
+                <div className="case-section__rule" aria-hidden="true" />
+                <p className="case-section__body">{project.context}</p>
+              </section>
+
+              <section
+                className="case-section"
+                data-animate
+                style={{ '--delay': '120ms' } as React.CSSProperties}
+              >
+                <h2 className="case-section__heading">PROBLEMA</h2>
+                <div className="case-section__rule" aria-hidden="true" />
+                <p className="case-section__body">{project.problem}</p>
+              </section>
+
+              <section
+                className="case-section"
+                data-animate
+                style={{ '--delay': '160ms' } as React.CSSProperties}
+              >
+                <h2 className="case-section__heading">MINHA ATUAÇÃO</h2>
+                <div className="case-section__rule" aria-hidden="true" />
+                <p className="case-section__body">{project.contribution}</p>
+              </section>
+
+              <section
+                className="case-section"
+                data-animate
+                style={{ '--delay': '200ms' } as React.CSSProperties}
+              >
+                <h2 className="case-section__heading">DECISÕES TÉCNICAS</h2>
+                <div className="case-section__rule" aria-hidden="true" />
+                <p className="case-section__body">{project.technicalDecisions}</p>
+              </section>
+
+              <section
+                className="case-section"
+                data-animate
+                style={{ '--delay': '240ms' } as React.CSSProperties}
+              >
+                <h2 className="case-section__heading">RESULTADO</h2>
+                <div className="case-section__rule" aria-hidden="true" />
+                <ul className="case-results">
+                  {project.results.map((result, i) => (
+                    <li key={i} className="case-result">
+                      <span className="case-result__check" aria-hidden="true">✓</span>
+                      {result}
+                    </li>
+                  ))}
+                </ul>
+              </section>
+
+            </div>
               </div>
-          </aside>
-          )}
-        </div>
+
+              {hasSidebarMedia && (
+                <aside className="case-sidebar">
+                  {project.video ? (
+                    <div
+                      className="case-video"
+                      data-animate
+                      style={{ '--delay': '80ms' } as React.CSSProperties}
+                    >
+                      <ProjectVideo src={project.video} title={project.title} />
+                    </div>
+                  ) : sidebarImageSrc ? (
+                    <div
+                      className="case-cover-image"
+                      data-animate
+                      style={{ '--delay': '80ms' } as React.CSSProperties}
+                    >
+                      <img src={sidebarImageSrc} alt={project.title} className="case-cover-image__img" />
+                    </div>
+                  ) : null}
+                </aside>
+              )}
+            </div>
+          )
+        })()}
 
         {/* ── Gallery ──────────────────────────────────────────── */}
         {project.images.length > 0 && (

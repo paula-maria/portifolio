@@ -13,7 +13,7 @@ export const projects: Project[] = [
     contribution:
       'Atuei no desenvolvimento da interface web, implementando componentes de formulário, validações, fluxo de inscrição e integração com a API. Trabalhei também no painel administrativo para gestão dos candidatos inscritos, contribuindo para a experiência do servidor público.',
     technicalDecisions:
-      'Optamos por React com componentização granular para reaproveitamento entre o fluxo do candidato e o painel administrativo. A integração com a API seguiu contratos definidos em conjunto com o backend. Priorizamos validação no frontend para reduzir erros antes do envio.',
+      'Optamos ',
     results: [
       'Processo de inscrição 100% online',
       'Redução significativa no tempo de análise dos candidatos',
@@ -38,6 +38,7 @@ export const projects: Project[] = [
     siteUrl: undefined,
     repoUrl: undefined,
     featured: true,
+    status: 'Em Produção',
     category: 'web',
   },
   {
@@ -76,6 +77,7 @@ export const projects: Project[] = [
     siteUrl: 'https://governodigital.portal.ap.gov.br/',
     repoUrl: undefined,
     featured: true,
+    status: 'Em Produção',
     category: 'web',
   },
   {
@@ -107,14 +109,15 @@ export const projects: Project[] = [
       { label: 'Deploy e entrega' },
     ],
     tags: ['FastAPI', 'React', 'PostgreSQL', 'WebSocket', 'SQLAlchemy'],
-    video: undefined,
+    video: '/videos/lettuce.webm',
     images: [
       { src: '/images/projects/senha-lettuce/1.png', alt: 'Painel da cozinha' },
       { src: '/images/projects/senha-lettuce/2.png', alt: 'Painel TV de senhas' },
     ],
-    siteUrl: undefined,
-    repoUrl: undefined,
+    siteUrl: 'https://senhas-lettuce1.vercel.app/cozinha',
+    repoUrl: 'https://senhas-lettuce.onrender.com/docs',
     featured: false,
+    status: 'Em Produção',
     category: 'system',
   },
   {
@@ -152,6 +155,7 @@ export const projects: Project[] = [
     siteUrl: undefined,
     repoUrl: undefined,
     featured: false,
+    status: 'Concluído',
     category: 'web',
   },
   {
@@ -193,6 +197,7 @@ export const projects: Project[] = [
     siteUrl: undefined,
     repoUrl: undefined,
     featured: false,
+    status: 'Em Produção',
     category: 'system',
   },
   {
@@ -230,6 +235,7 @@ export const projects: Project[] = [
     siteUrl: undefined,
     repoUrl: undefined,
     featured: false,
+    status: 'Concluído',
     category: 'data',
   },
   {
@@ -263,7 +269,7 @@ export const projects: Project[] = [
       { label: 'Validação OECD (Y-Scrambling, Leverage, GHS)' },
     ],
     tags: ['Python', 'RDKit', 'Scikit-learn', 'Streamlit', 'Random Forest', 'Machine Learning'],
-    video: undefined,
+    video: '/videos/qsar.webm',
     images: [
       { src: '/images/projects/qsar/residuos.png', alt: 'Análise de Resíduos: Toxicidade Observada vs. Prevista (pEC50)' },
       { src: '/images/projects/qsar/1.png', alt: 'Pipeline QSAR' },
@@ -272,6 +278,7 @@ export const projects: Project[] = [
     siteUrl: undefined,
     repoUrl: undefined,
     featured: false,
+    status: 'Concluído',
     category: 'ml',
   },
 ]

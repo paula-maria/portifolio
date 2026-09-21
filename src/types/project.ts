@@ -1,6 +1,8 @@
 export interface ProjectImage {
   src: string
   alt: string
+  aspectRatio?: 'landscape' | 'portrait' | 'square' | 'auto'
+  fit?: 'cover' | 'contain'
 }
 
 export interface EngineeringStep {
@@ -26,5 +28,6 @@ export interface Project {
   siteUrl?: string
   repoUrl?: string
   featured: boolean
+  status?: string
   category: 'web' | 'system' | 'data' | 'ml'
 }
